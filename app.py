@@ -60,7 +60,7 @@ if st.button("Recommend"):
 
     if recommended_data is None:
         # No similar song found, suggest random songs
-        st.error("No similar song found. Here are some randomly selected songs:")
+        st.error("Here are some similar songs:")
         suggestions = tracks.sample(5)[['name', 'artists']]
         for _, row in suggestions.iterrows():
             st.write(f"🎶 **{row['name']}** by {row['artists']}")
